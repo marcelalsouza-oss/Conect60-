@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conect60+ | Exercícios para a terceira idade</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Pular para o conteúdo</a>
+
+<header class="top">
+  <a class="logo" href="#" data-go="home" aria-label="Conect60+, página inicial">CONECT60+</a>
+  <nav class="top-actions" aria-label="Principal">
+    <button class="btn btn-sm" id="btn-enter-top" data-open="login">Entrar</button>
+    <button class="icon-btn" id="btn-profile" data-open="profile" aria-label="Abrir meu perfil" hidden>
+      <img id="top-avatar" alt="" hidden>
+      <svg id="top-avatar-svg" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4.5 4.5-6 8-6s7 1.5 8 6"/></svg>
+    </button>
+    <button class="btn btn-sm btn-ghost" id="btn-logout" hidden>Sair</button>
+  </nav>
+</header>
+
+<main id="main" tabindex="-1">
+
+  <!-- HOME -->
+  <section class="view is-active" id="view-home" aria-labelledby="h-home">
+    <div class="hero">
+      <div class="hero-text">
+        <h1 id="h-home">Movimento e cuidado, <br>no seu ritmo.</h1>
+        <p>Aulas simples de exercícios para a terceira idade, feitas por fisioterapeutas de alto nível, direto na sua casa.</p>
+        <div class="cta">
+          <button class="btn" data-open="signup">Cadastre-se</button>
+          <button class="btn btn-outline" data-open="login">Entrar</button>
+        </div>
+      </div>
+      <div class="hero-img" role="img" aria-label="Senhora fazendo alongamento em casa, seguindo uma aula pelo celular"></div>
+    </div>
+    <section class="about" aria-labelledby="h-about">
+      <h2 id="h-about">Sobre o Conect60+</h2>
+      <p>O site busca entregar modelos de exercícios simples para a terceira idade, utilizando a tecnologia para promover o combate ao sedentarismo. Com aulas desenvolvidas por fisioterapeutas de alto nível.</p>
+    </section>
+
+  <!-- CONHEÇA NOSSO TRABALHO (só na página inicial) -->
+  <section class="work" id="trabalho" tabindex="-1" aria-labelledby="h-work">
+    <h2 id="h-work">Conheça nosso trabalho</h2>
+    <ul class="work-grid">
+      <li><figure tabindex="0">
+        <div class="photo p1" role="img" aria-label="Fisioterapeuta atendendo um paciente idoso em uma clínica"></div>
+        <figcaption>Nossos fisioterapeutas são profissionais qualificados e preparados para atender as necessidades da terceira idade.</figcaption>
+      </figure></li>
+      <li><figure tabindex="0">
+        <div class="photo p2" role="img" aria-label="Fisioterapeuta ajudando uma senhora em um exercício de alongamento dos braços"></div>
+        <figcaption>Todos os exercícios são seguros, confiáveis e desenvolvidos com base em orientações profissionais.</figcaption>
+      </figure></li>
+      <li><figure tabindex="0">
+        <div class="photo p3" role="img" aria-label="Fisioterapeuta sorrindo, de braços cruzados, em sala de fisioterapia"></div>
+        <figcaption>Nossa equipe acompanha cada aula com carinho e atenção, para você se sentir seguro em cada movimento.</figcaption>
+      </figure></li>
+    </ul>
+  </section>
+  </section>
+
+  <!-- HOME DO IDOSO -->
+  <section class="view" id="view-elder" aria-labelledby="h-elder">
+    <div class="banner"><h1 id="h-elder">Olá, <span class="user-name">bem-vindo</span>!</h1></div>
+    <div class="content">
+      <h2 class="tag">Suas aulas</h2>
+      <p class="progress" id="progress" aria-live="polite"></p>
+      <ul class="grid lessons" id="lessons"></ul>
+      <button class="btn btn-outline" id="btn-rate" data-open="rate" hidden>Avaliar o fisioterapeuta</button>
+      <h2 class="tag">Profissionais</h2>
+      <p class="sub">Toque em um profissional para ver as informações e as aulas dele.</p>
+      <ul class="pros" id="pros"></ul>
+      <h2 class="tag">Exercícios</h2>
+      <ul class="grid tiles" id="tiles"></ul>
+    </div>
+  </section>
+
+  <!-- HOME DO PROFISSIONAL -->
+  <section class="view" id="view-pro" aria-labelledby="h-pro">
+    <div class="banner"><h1 id="h-pro">Olá, <span class="user-name">profissional</span>!</h1></div>
+    <div class="content">
+      <div class="publish">
+        <h2>Publicar atividades</h2>
+        <label class="btn btn-outline upload">
+          Publique suas atividades
+          <input type="file" id="file-up" accept="video/*,image/*" multiple>
+        </label>
+        <ul class="published" id="published" aria-live="polite"></ul>
+      </div>
+      <h2 class="tag">Quadros</h2>
+      <ul class="grid lessons" id="boards"></ul>
+    </div>
+  </section>
+
+  <!-- NOSSO TRABALHO (equipe e TCC) -->
+  <section class="view" id="view-team" aria-labelledby="h-team">
+    <div class="banner">
+      <h1 id="h-team">Nosso trabalho</h1>
+      <p class="cat-desc">Conheça a equipe e o projeto por trás do CONECT 60+.</p>
+    </div>
+    <div class="content">
+      <div class="team-top">
+        <figure class="team-photo">
+          <img src="imagens/equipe.jpg" alt="Foto da equipe de desenvolvimento do CONECT 60+" width="1200" height="800">
+          <figcaption>Equipe de desenvolvimento do CONECT 60+</figcaption>
+        </figure>
+        <div class="team-text">
+          <h2>Sobre o nosso TCC</h2>
+          <p><strong>O CONECT 60+</strong> é uma plataforma web digital assistiva que une tecnologia e fisioterapia preventiva para o público 60+.</p>
+          <p>Desenvolvido como Trabalho de Conclusão de Curso (TCC), o projeto leva aulas e exercícios simples para dentro da casa das pessoas idosas, com a orientação de profissionais de fisioterapia, e usa uma interface pensada para ser fácil, clara e acessível.</p>
+          <p>Nosso propósito é aproximar a terceira idade da tecnologia e, ao mesmo tempo, incentivar o movimento e o cuidado com a saúde todos os dias.</p>
+        </div>
+      </div>
+      <h2 class="tag">O que a plataforma promove</h2>
+      <ul class="goals">
+        <li class="goal"><span class="ico" aria-hidden="true">💻</span><h3>Integração dos idosos no meio digital</h3><p>Interface simples, com letras grandes e recursos de acessibilidade, para quem está começando no mundo digital.</p></li>
+        <li class="goal"><span class="ico" aria-hidden="true">🧠</span><h3>Estímulo à independência cognitiva</h3><p>Escolher aulas, seguir os passos e acompanhar o próprio progresso ajudam a exercitar a autonomia, a atenção e a memória.</p></li>
+        <li class="goal"><span class="ico" aria-hidden="true">🦵</span><h3>Melhora da mobilidade</h3><p>Exercícios leves de alongamento, equilíbrio e fortalecimento, orientados por fisioterapeutas.</p></li>
+        <li class="goal"><span class="ico" aria-hidden="true">🏃</span><h3>Prevenção do sedentarismo</h3><p>Aulas curtas, que podem ser feitas em casa, ajudam a criar o hábito de se movimentar todos os dias.</p></li>
+      </ul>
+      <a class="btn" href="#" data-go="home">Voltar ao início</a>
+    </div>
+  </section>
+
+  <!-- PÁGINA DE CATEGORIA DE EXERCÍCIOS -->
+  <section class="view" id="view-cat" aria-labelledby="h-cat">
+    <div class="banner cat-banner">
+      <div class="banner-text">
+      <nav class="crumbs" aria-label="Você está em">
+        <a href="#" id="crumb-back">Exercícios</a> <span aria-hidden="true">/</span> <span id="cat-crumb" aria-current="page"></span>
+      </nav>
+      <h1 id="h-cat"></h1>
+      <p id="cat-desc" class="cat-desc"></p>
+      </div>
+      <img id="cat-img" class="cat-img" alt="" width="233" height="179">
+    </div>
+    <div class="content">
+      <p class="safety" role="note"><strong>Atenção:</strong> faça os movimentos devagar. Pare se sentir dor, tontura ou falta de ar e converse com o seu profissional de saúde.</p>
+      <ul class="grid ex-grid" id="ex-list"></ul>
+      <nav class="cat-nav" aria-label="Outras categorias">
+        <button type="button" class="btn btn-outline" id="cat-prev"></button>
+        <button type="button" class="btn" id="cat-back">Voltar aos exercícios</button>
+        <button type="button" class="btn btn-outline" id="cat-next"></button>
+      </nav>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <strong class="logo light">CONECT60+</strong>
+  <nav class="foot-cols" aria-label="Rodapé">
+    <div id="foot-work">
+      <h2 class="f-title">Conheça nosso trabalho</h2>
+      <ul>
+        <li><a href="#nosso-trabalho" id="lnk-work">Nosso trabalho</a></li>
+        <li><a href="#" data-go="home">Página inicial</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="f-title">Entre em contato</h2>
+      <ul>
+        <li><a href="tel:+5571999990000">(71) 99999-0000</a></li>
+        <li><a href="mailto:contato@conect60.test">contato@conect60.test</a></li>
+        <li><button type="button" class="f-btn" data-open="contact">Enviar mensagem</button></li>
+      </ul>
+    </div>
+  </nav>
+</footer>
+
+<!-- DIALOGS (formulários só aparecem ao clicar) -->
+<dialog id="dlg-signup" aria-labelledby="t-signup">
+  <form method="dialog" class="card" id="f-signup" novalidate>
+    <button type="button" class="close" data-close aria-label="Fechar">×</button>
+    <h2 id="t-signup">Cadastre-se</h2>
+    <p class="err" role="alert" aria-live="assertive"></p>
+    <label>Nome completo<input name="nome" autocomplete="name" required></label>
+    <div class="pro-only" hidden>
+      <label>E-mail<input name="email" type="email" autocomplete="email"></label>
+    </div>
+    <label>Telefone<input name="tel" type="tel" inputmode="tel" autocomplete="tel" required></label>
+    <label>Senha<input name="senha" type="password" autocomplete="new-password" minlength="6" required></label>
+    <div class="pro-only" hidden>
+      <label>Número do Crefito<input name="crefito"></label>
+    </div>
+    <button class="btn" type="submit">Cadastrar-se</button>
+    <button type="button" class="link" id="toggle-pro" aria-pressed="false">Entre como profissional de saúde</button>
+    <button type="button" class="link" data-open="login">Já tenho conta</button>
+  </form>
+</dialog>
+
+<dialog id="dlg-login" aria-labelledby="t-login">
+  <form method="dialog" class="card" id="f-login" novalidate>
+    <button type="button" class="close" data-close aria-label="Fechar">×</button>
+    <h2 id="t-login">Entrar</h2>
+    <p class="err" role="alert" aria-live="assertive"></p>
+    <label>Telefone<input name="tel" type="tel" inputmode="tel" autocomplete="tel" required></label>
+    <label>Senha<input name="senha" type="password" autocomplete="current-password" required></label>
+    <button class="btn" type="submit">Entrar</button>
+    <button type="button" class="link" data-open="reset">Esqueceu a senha?</button>
+    <button type="button" class="link" data-open="signup">Criar conta</button>
+  </form>
+</dialog>
+
+<dialog id="dlg-reset" aria-labelledby="t-reset">
+  <form method="dialog" class="card" id="f-reset" novalidate>
+    <button type="button" class="close" data-close aria-label="Fechar">×</button>
+    <h2 id="t-reset">Redefinir senha</h2>
+    <p class="err" role="alert" aria-live="assertive"></p>
+    <label>Telefone<input name="tel" type="tel" inputmode="tel" required></label>
+    <label>Nova senha<input name="senha" type="password" minlength="6" autocomplete="new-password" required></label>
+    <button class="btn" type="submit">Alterar senha</button>
+  </form>
+</dialog>
+
+<!-- PERFIL (pop-up) -->
+<dialog id="dlg-profile" aria-labelledby="t-profile" class="wide">
+  <form method="dialog" class="card profile" id="f-profile" novalidate>
+    <button type="button" class="close" data-close aria-label="Fechar">×</button>
+    <h2 id="t-profile" class="bar">Perfil</h2>
+    <p class="err" role="alert" aria-live="assertive"></p>
+    <div class="profile-body">
+      <div class="avatar-wrap">
+        <div class="avatar" id="avatar-box">
+          <img id="avatar-img" alt="Sua foto de perfil" hidden>
+          <svg id="avatar-svg" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4.5 4.5-6 8-6s7 1.5 8 6"/></svg>
+        </div>
+        <div class="photo-actions">
+          <label class="btn btn-sm btn-outline photo-btn">Alterar foto<input type="file" id="photo-input" accept="image/png,image/jpeg,image/webp"></label>
+          <button type="button" class="link" id="photo-remove" hidden>Remover foto</button>
+        </div>
+      </div>
+      <div class="fields">
+        <label>Nome completo<input name="nome" autocomplete="name"></label>
+        <label>Telefone para contato<input name="tel" type="tel" autocomplete="tel"></label>
+        <label class="pro-only">Título profissional<input name="titulo" placeholder="Ex.: Fisioterapeuta, Crefito 0000"></label>
+        <label class="pro-only">Resumo profissional<textarea name="resumo" rows="3"></textarea></label>
+        <label>Senha<input name="hashview" id="hashview" class="hash" readonly aria-describedby="hash-help"></label>
+        <p class="hint left" id="hash-help">Por segurança, sua senha fica sempre oculta. Para trocar, use “Atualizar senha” abaixo.</p>
+        <fieldset class="pass-box">
+          <legend>Atualizar senha</legend>
+          <label>Senha atual<input name="atual" type="password" autocomplete="current-password"></label>
+          <label>Nova senha<input name="nova" type="password" autocomplete="new-password" minlength="6"></label>
+          <label>Confirmar nova senha<input name="conf" type="password" autocomplete="new-password"></label>
+          <button type="button" class="btn btn-outline" id="btn-newpass">Atualizar senha</button>
+        </fieldset>
+        <button class="btn" type="submit">Salvar alterações</button>
+      </div>
+    </div>
+  </form>
+</dialog>
+
+
+<!-- CONTATO -->
+<dialog id="dlg-contact" aria-labelledby="t-contact">
+  <form method="dialog" class="card" id="f-contact" novalidate>
+    <button type="button" class="close" data-close aria-label="Fechar">×</button>
+    <h2 id="t-contact">Fale com a gente</h2>
+    <p class="hint">Telefone de teste: (71) 99999-0000<br>E-mail de teste: contato@conect60.test</p>
+    <p class="err" role="alert" aria-live="assertive"></p>
+    <label>Nome<input name="nome" autocomplete="name" required></label>
+    <label>E-mail<input name="email" type="email" autocomplete="email" required></label>
+    <label>Mensagem<textarea name="msg" rows="4" required></textarea></label>
+    <button class="btn" type="submit">Enviar mensagem</button>
+  </form>
+</dialog>
+
+<!-- PLAYER DA AULA -->
+<dialog id="dlg-player" aria-labelledby="t-player" class="wide">
+  <div class="card">
+    <button type="button" class="close" data-close aria-label="Fechar aula">×</button>
+    <h2 id="t-player">Aula</h2>
+    <video id="player" controls preload="metadata"></video>
+    <p class="hint" id="player-hint"></p>
+    <button class="btn" type="button" id="btn-finish">Concluir aula</button>
+  </div>
+</dialog>
+
+<!-- AVALIAÇÃO (ao finalizar as aulas) -->
+<dialog id="dlg-rate" aria-labelledby="t-rate" class="eval">
+  <form method="dialog" class="card" id="f-rate" novalidate>
+    <div class="rate-head">
+      <div class="avatar sm" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4.5 4.5-6 8-6s7 1.5 8 6"/></svg></div>
+      <div><span class="chip">Sessão / Pacote finalizado</span><strong id="rate-pro">Nome do Profissional</strong></div>
+      <button type="button" class="btn btn-sm btn-ghost" data-close>× Fechar</button>
+    </div>
+    <hr>
+    <fieldset class="rate-set">
+      <legend id="t-rate">Como foi a sua experiência com este fisioterapeuta?</legend>
+      <button type="button" class="btn btn-sm btn-listen" id="btn-listen" aria-label="Ouvir a pergunta e as opções">🔊 Ouvir</button>
+      <div class="opts">
+        <label class="opt o-bad"><input type="radio" name="nota" value="1"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 15H5.5a2 2 0 0 1-2-2.3l1-6A2 2 0 0 1 6.5 5H17v10l-4 6a2 2 0 0 1-2-2z"/></svg>Não gostei</span></label>
+        <label class="opt o-neutral"><input type="radio" name="nota" value="2"><span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 15h8M9 9.5h.01M15 9.5h.01"/></svg>Neutro</span></label>
+        <label class="opt o-good"><input type="radio" name="nota" value="3"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 9h4.5a2 2 0 0 1 2 2.3l-1 6a2 2 0 0 1-2 1.7H7V9l4-6a2 2 0 0 1 2 2z"/></svg>Gostei</span></label>
+        <label class="opt o-great"><input type="radio" name="nota" value="4"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>Ótimo</span></label>
+      </div>
+    </fieldset>
+    <button class="btn btn-save" type="submit" id="btn-save" disabled>Salvar avaliação</button>
+    <button type="button" class="link" data-close>Responder depois</button>
+  </form>
+</dialog>
+
+<!-- PERFIL DO PROFISSIONAL (visto pelo idoso) -->
+<dialog id="dlg-pro" aria-labelledby="pro-name" class="wide">
+  <div class="card pro-card">
+    <button type="button" class="close" data-close aria-label="Fechar">×</button>
+    <div class="pro-head">
+      <img id="pro-photo" class="pro-photo" alt="" hidden>
+      <div>
+        <h2 id="pro-name"></h2>
+        <p id="pro-title" class="pro-title"></p>
+        <span class="chip" id="pro-demo" hidden>Perfil de demonstração</span>
+      </div>
+    </div>
+    <p id="pro-sum"></p>
+    <h3>Aulas deste profissional</h3>
+    <ul class="pro-lessons" id="pro-lessons"></ul>
+  </div>
+</dialog>
+
+<!-- ACESSIBILIDADE -->
+<div class="a11y" id="a11y">
+  <button type="button" class="a11y-toggle" id="a11y-toggle" aria-expanded="false" aria-controls="a11y-panel" aria-label="Opções de acessibilidade">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="4.5" r="2"/><path d="M5 8.5h14M12 8.5v5M12 13.5l-3.5 6.5M12 13.5l3.5 6.5"/></svg>
+  </button>
+  <div class="a11y-panel" id="a11y-panel" role="region" aria-label="Opções de acessibilidade" hidden>
+    <h2>Acessibilidade</h2>
+    <div class="a11y-row" role="group" aria-label="Tamanho da letra">
+      <span>Tamanho da letra: <output id="fs-val" aria-live="polite">100%</output></span>
+      <button type="button" class="a11y-b" id="fs-minus" aria-label="Diminuir letra">A−</button>
+      <button type="button" class="a11y-b" id="fs-plus" aria-label="Aumentar letra">A+</button>
+      <button type="button" class="a11y-b" id="fs-reset" aria-label="Voltar ao tamanho padrão">Padrão</button>
+    </div>
+    <button type="button" class="a11y-opt" id="opt-hc" aria-pressed="false"><span aria-hidden="true">◐</span> Alto contraste</button>
+    <button type="button" class="a11y-opt" id="opt-read" aria-pressed="false"><span aria-hidden="true">🔊</span> Ouvir a página</button>
+    <button type="button" class="a11y-opt" id="opt-libras" aria-pressed="false"><span aria-hidden="true">🤟</span> Libras (VLibras)</button>
+    <p class="hint left">Dica: selecione um trecho do texto antes de tocar em “Ouvir” para ouvir só ele.</p>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
