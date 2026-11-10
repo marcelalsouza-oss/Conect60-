@@ -20,6 +20,10 @@ button,input,textarea{font:inherit}
 .top{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:.7rem clamp(1rem,4vw,2.5rem);background:var(--white);box-shadow:0 1px 0 #dbe7e7}
 .logo{font-weight:800;letter-spacing:.06em;font-size:1.4rem;color:var(--teal-d);text-decoration:none}
 .logo.light{color:#fff}
+.logo{display:inline-flex;align-items:center;line-height:0}
+.logo-img{display:block;height:1.9rem;width:auto;aspect-ratio:6.881}
+.brand{display:inline-block;vertical-align:-.12em;line-height:0}
+.brand .logo-img{height:.85em}
 .top-actions{display:flex;gap:.6rem;align-items:center}
 
 /* botões */
